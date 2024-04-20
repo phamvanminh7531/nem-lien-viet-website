@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+.nav{
+    background-color: #ffffff;
+}
+
+.nav-item{
+    margin-left: 2em;
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 30vh;
+  width: 100%;
+}
+
+.phone-num {
+  border-radius: 500px;
+  font-weight: bold;
+  background-color: gold;
+
+}
+.phone-num:hover {
+  background-color: red;
+  color: #ffffff;
+}
+
+
+.product-item{
+  text-decoration: none !important;
+  display: inline-block;
+  transition: transform .2s; /* Animation */
+}
+
+.product-item:hover{
+  transform: scale(1.02);
+}
+
+.product-name{
+  color: black;
+}
+
+.product-img{
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
+.price-text{
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.product-call-btn{
+  font-weight: bold;
+  color: #ffffff;
+  background-color: red;
+}
+
+.product-call-btn:hover{
+  background-color: gold;
+}
+
+.service {
+  background-color: rgb(255, 255, 255);
+}
+
+.news1-image{
+  width: 100%;
+  height: auto;
+}
+
+.news2-image{
+  width: 100%;
+  height: auto;
+}
+
+.news-title {
+  text-decoration: none !important;
+}
