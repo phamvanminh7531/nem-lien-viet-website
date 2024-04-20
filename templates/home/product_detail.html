@@ -1,0 +1,47 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/product-detail.css' %}">
+{% endblock %}
+{% block content %}
+{% load humanize %}
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ product.images.url }}" alt="nem-cao-su" /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">{{ product.product_name }}</h1>
+                <h3 class="fix-price">Giá khuyến mãi: {{ product.fix_price|intcomma }}</h3>
+                <div class="fs-5 mb-5">
+                    <span class="text-decoration-line-through">Giá cũ: {{ product.price|intcomma }}</span>
+                </div>
+
+                <p class="lead">{{ product.description }}</p>
+                <div class="d-flex">
+                    <a class="phone-num btn" aria-current="page" href="tel:+84354238253">GỌI NGAY 0354
+                        238 253</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="related-product-sec">
+    <div class="container">
+        <div class="row my-3">
+            {% for product in related_products %}
+            <div class="col-6 col-md-3 text-center product-card p-2">
+                <a class="product-item text-center" href="/san-pham/{{ product.slug }}">
+                    <img class="product-img" src="{{ product.images.url }}" alt="nem-cao-su">
+                    <h5 class="product-name mt-2">{{ product.product_name }}</h5>
+                </a>
+                <div class="d-flex flex-row price-text">
+                    <h5 class="mb-1 me-1">{{ product.fix_price|intcomma }}</h5>
+                    <span class="text-danger"><s>{{ product.price|intcomma }}</s></span>
+                </div>
+                <a href="/san-pham/{{ product.slug }}" class="btn mt-2 product-call-btn">CHI TIẾT</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}
