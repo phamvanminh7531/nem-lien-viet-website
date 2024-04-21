@@ -35,6 +35,8 @@
   text-decoration: none !important;
   display: inline-block;
   transition: transform .2s; /* Animation */
+  width: 100%;
+  height: auto;
 }
 
 .product-item:hover{
@@ -50,7 +52,7 @@
 }
 
 .product-img{
-  object-fit: cover;
+  /* object-fit: cover; */
   text-decoration: none !important;
   width: 100%;
   height: 20vh;
