@@ -18,8 +18,7 @@
 
                 <p class="lead">{{ product.description }}</p>
                 <div class="d-flex">
-                    <a class="phone-num btn" aria-current="page" href="tel:+84354238253">GỌI NGAY 0354
-                        238 253</a>
+                    <a class="phone-num btn" aria-current="page" href="tel:{{ info.phone_num_1 }}">GỌI NGAY {{ info.phone_num_1 }}</a>
                 </div>
             </div>
         </div>
@@ -27,6 +26,11 @@
 </section>
 <section class="related-product-sec">
     <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="product-title-text">SẢN PHẨM LIÊN QUAN</h3>
+            </div>
+        </div>
         <div class="row my-3">
             {% for product in related_products %}
             <div class="col-6 col-md-3 text-center product-card p-2">

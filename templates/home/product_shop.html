@@ -2,36 +2,8 @@
 {% load static %}
 {% load humanize %}
 {% block content %}
-<!-- <section class="product px-1" style="margin-top: 15vh;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h3 class="product-title-text">SẢN PHẨM</h3>
-            </div>
-        </div>
-        <div class="row my-3">
-            {% for product in products %}
-            <div class="col-6 col-md-3 text-center product-card p-2">
-                <a class="product-item text-center" href="/san-pham/{{ product.slug }}">
-                    <img class="product-img" src="{{ product.images.url }}" alt="nem-cao-su">
-                    <h5 class="product-name mt-2">{{ product.product_name }}</h5>
-                </a>
-                <div class="d-flex flex-row price-text">
-                    <h5 class="mb-1 me-1">{{ product.fix_price|intcomma }}</h5>
-                    <span class="text-danger"><s>{{ product.price|intcomma }}</s></span>
-                </div>
-                <a href="/san-pham/{{ product.slug }}" class="btn mt-2 product-call-btn">CHI TIẾT</a>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="/san-pham/{{ product.slug }}" class="more-title-a"><h3 class="more-title">XEM THÊM SẢN PHẨM</h3></a>
-            </div>
-        </div>
-    </div>
-</section> -->
-<section class="product px-1" style="margin-top: 15vh;">
+
+<section class="product px-1" style="margin-top: 20vh; margin-bottom: 10vh;">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -57,7 +29,7 @@
         {% endfor %}
         <div class="row">
             <div class="col-12 text-center">
-                <a href="/san-pham/{{ product.slug }}" class="more-title-a"><h3 class="more-title">XEM THÊM SẢN PHẨM</h3></a>
+                <a href="/tat-ca-san-pham/" class="more-title-a"><h3 class="more-title">XEM THÊM SẢN PHẨM</h3></a>
             </div>
         </div>
     </div>

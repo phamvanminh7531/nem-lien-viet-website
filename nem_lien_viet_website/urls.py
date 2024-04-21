@@ -18,8 +18,23 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.static import serve
 from django.conf import settings
+from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
+from .sitemap import ProductSitemap, MainSitemap, ProductCategorySitemap
+
+sitemaps = {
+    'sitemaps': {
+        'main': MainSitemap,
+        'Product': ProductSitemap,
+        'ProductCategory': ProductCategorySitemap,
+    }
+}
+
 
 urlpatterns = [
+    path('sitemap.xml', sitemap, sitemaps, name='django.contrib.sitemaps.views.sitemap'),
+    path('my_sitemap.xml', sitemap, sitemaps, name='django.contrib.sitemaps.views.sitemap'),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     path('admin/', admin.site.urls),
     path('', include("home.urls")),
 

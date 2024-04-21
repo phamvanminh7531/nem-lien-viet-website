@@ -8,7 +8,7 @@ def home(request):
     products = Product.objects.all()[:9]
     context = {
         'products_1' : products[:4],
-        'products_2' : products[5:9],
+        'products_2' : products[4:9],
     }
     
     return render(request, "home/home.html", context=context)

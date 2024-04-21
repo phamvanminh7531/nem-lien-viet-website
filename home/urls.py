@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import *
 
+
 urlpatterns = [
     path('', home),
     path('san-pham/<str:slug>/', product_detail, name="product"),

@@ -49,7 +49,7 @@ class ProductCategory(models.Model):
         super(ProductCategory, self).save(*args, **kwargs)
 
 class Product(models.Model):
-    product_name = models.CharField(max_length=250, verbose_name="Tên Sản Phẩm")
+    product_name = models.CharField(max_length=250, unique=True, verbose_name="Tên Sản Phẩm")
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, verbose_name="Danh Mục Sản Phẩm")
     description = models.TextField(verbose_name="Miêu Tả Sản Phẩm")
     price = models.BigIntegerField(blank=True, verbose_name="Giá Cũ")

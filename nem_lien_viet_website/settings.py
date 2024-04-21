@@ -39,9 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    "django.contrib.sites",  # new
+    "django.contrib.sitemaps",  # new 
     'home',
     'django_cleanup.apps.CleanupConfig',
 ]
+
+SITE_ID = 1 # define the site id
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
